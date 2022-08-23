@@ -1,11 +1,15 @@
 import React from "react";
 
-const Header = (props: any) => {
-  return <h1>노랑풍선</h1>;
+interface Props {
+  className?: string;
+  children: string;
+}
+const Header = ({ className, children }: Props) => {
+  return (
+    <h1 className={`bg-orange-600 text-white text-center py-2 ${className}`}>
+      {children}
+    </h1>
+  );
 };
 
-const SubHeader = () => {
-  return <>subHeader</>;
-};
-
-export { Header, SubHeader };
+export default Header;
