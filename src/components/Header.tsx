@@ -1,14 +1,29 @@
+import Image from "next/image";
 import React from "react";
 
-interface Props {
-  className?: string;
-  children: string;
+interface image {
+  src: string;
 }
-const Header = ({ className, children }: Props) => {
+
+const imgLoader = ({ src }: image) => {
+  return `../assets/images/common/${src}`;
+};
+
+const Header = () => {
   return (
-    <h1 className={`bg-orange-600 text-white text-center py-2 ${className}`}>
-      {children}
-    </h1>
+    <>
+      <h1>
+        <a href='#'>
+          <Image
+            loader={imgLoader}
+            src='logo.png'
+            width={155}
+            height={42}
+            alt='노랑풍선'
+          />
+        </a>
+      </h1>
+    </>
   );
 };
 
