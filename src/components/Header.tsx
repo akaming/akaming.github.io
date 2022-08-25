@@ -47,7 +47,7 @@ const Header = () => {
         </h1>
         <ul className='flex' onMouseOver={() => setIsHover(!isHover)}>
           <li>
-            <a href='#'>회사소개</a>
+            <a href='#'>회사소개test</a>
             <GnbSub hide={isHover}>
               <GnbSubItem>
                 <a href='#'>회사개요</a>
