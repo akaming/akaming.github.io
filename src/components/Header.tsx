@@ -10,6 +10,10 @@ const imgLoader = ({ src }: image) => {
   return `/images/common/${src}`;
 };
 
+const Test = styled.div`
+  color: red;
+`;
+
 const Header = () => {
   const menus = [
     {
@@ -80,6 +84,7 @@ const Header = () => {
             />
           </a>
         </h1>
+        <Test>TEST</Test>
         <ul className='flex items-center'>
           {menus.map((v, index) => {
             return (
