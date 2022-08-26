@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import Image from "next/image";
 import React from "react";
-
+import styled from "styled-components";
 interface image {
   src: string;
 }
@@ -68,9 +68,9 @@ const Header = () => {
 
   return (
     <div className='w-full'>
-      <div className='flex lg:w-[1200px] lg:m-auto justify-between'>
+      <div className='flex lg:w-[1200px] lg:m-auto justify-between items-center'>
         <h1>
-          <a href='#'>
+          <a href='#' className='block leading-none'>
             <Image
               loader={imgLoader}
               src='logo.png'
@@ -84,12 +84,20 @@ const Header = () => {
           {menus.map((v, index) => {
             return (
               <li className='relative group' key={index}>
-                <a href={v.link}>{v.title}</a>
-                <ul className='absolute hidden group-hover:block'>
+                <a
+                  href={v.link}
+                  className='block pt-[16px] pb-[16px] h-[48px] w-[165px] text-center text-lg leading-none font-noto_m'
+                >
+                  {v.title}
+                </a>
+                <ul className='absolute hidden group-hover:block w-full'>
                   {v.subMenus.map((s, index) => {
                     return (
                       <li key={index}>
-                        <a href={s.link} className='block'>
+                        <a
+                          href={s.link}
+                          className='block text-[15px] text-center'
+                        >
                           {s.title}
                         </a>
                       </li>

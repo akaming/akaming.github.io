@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Noto_m";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../public/fonts/NotoSansKR-Medium-Hestia.woff") format("woff"),
+    url("../../public/fonts/NotoSansKR-Medium-Hestia.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Noto_r";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../public/fonts/NotoSansKR-Regular-Hestia.woff") format("woff"),
+    url("../../public/fonts/NotoSansKR-Regular-Hestia.otf") format("otf");
+}
