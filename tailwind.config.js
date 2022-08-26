@@ -1,6 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
@@ -18,21 +16,7 @@ module.exports = {
       lg: { min: "1024px" },
       // => 데스크탑 (가로 해상도가 1024px 보다 큰 화면에 적용)
     },
-    extend: {
-      fontFamily: {
-        sans: ["Noto_r", ...defaultTheme.fontFamily.sans],
-        poppins: ["Poppins", "sans-serif"],
-        noto_m: ["Noto_m", "sans-serif"],
-        noto_r: ["Noto_r", "sans-serif"],
-      },
-    },
-  },
-  purge: {
-    enabled: true,
-    content: [
-      "./src/pages/**/*.{js,ts,jsx,tsx}",
-      "./src/components/*.{js,ts,jsx,tsx}",
-    ],
+    extend: {},
   },
   plugins: [],
 };
