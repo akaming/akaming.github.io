@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
+import tw, { css, theme } from "twin.macro";
 interface image {
   src: string;
 }
@@ -9,6 +10,30 @@ interface image {
 const imgLoader = ({ src }: image) => {
   return `/images/common/${src}`;
 };
+
+const MenuItem = styled.a`
+  /* position: relative;
+  &:hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffcb31;
+  } */
+
+  ${tw`
+    block
+    pt-[15px]
+    pb-[20px]
+    w-[165px]
+    text-center
+    text-lg
+    leading-none
+    font-noto_m
+  `}
+`;
 
 const Header = () => {
   const menus = [
@@ -67,7 +92,7 @@ const Header = () => {
   ];
 
   return (
-    <div className='w-full'>
+    <div className='w-full pt-[15px]'>
       <div className='flex lg:w-[1200px] lg:m-auto justify-between items-center'>
         <h1>
           <a href='#' className='block leading-none'>
@@ -84,13 +109,8 @@ const Header = () => {
           {menus.map((v, index) => {
             return (
               <li className='relative group' key={index}>
-                <a
-                  href={v.link}
-                  className='block pt-[16px] pb-[16px] h-[48px] w-[165px] text-center text-lg leading-none font-noto_m'
-                >
-                  {v.title}
-                </a>
-                <ul className='absolute hidden group-hover:block w-full'>
+                <MenuItem href={v.link}>{v.title}</MenuItem>
+                <ul className='absolute group-hover:block w-full'>
                   {v.subMenus.map((s, index) => {
                     return (
                       <li key={index}>
@@ -112,5 +132,5 @@ const Header = () => {
     </div>
   );
 };
-
+// package.json add
 export default Header;
