@@ -1,0 +1,32 @@
+.skillList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+  margin: 60px 0 20px;
+}
+
+.skillList li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  border: 2px solid var(--color-text);
+  background-color: #fff;
+  color: #111;
+}
+
+.skillList li svg {
+  width: 56px;
+  height: 56px;
+}
+
+@media (min-width: 768px) {
+  .skillList {
+    grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
+    gap: 40px 70px;
+  }
+}

@@ -1,0 +1,27 @@
+.title {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 400;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.title strong {
+  font-weight: 700;
+}
+
+.title span {
+  font-family: system-ui;
+  font-weight: 800;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--color-text);
+}
+
+.light {
+  color: #f5f7fa;
+}

@@ -1,0 +1,20 @@
+/* src/styles/theme.css */
+
+:root {
+  /* color */
+  --color-bg: #fff;
+  --color-text: #111;
+  --color-muted: rgba(17, 17, 17, 0.6);
+  --color-border: rgba(0, 0, 0, 0.12);
+  --color-card-bg: #fff;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #0f1115;
+  --color-text: #f5f7fa;
+  --color-muted: rgba(245, 247, 250, 0.6);
+  --color-border: rgba(255, 255, 255, 0.14);
+  --color-card-bg: #151922;
+  color-scheme: dark;
+}
