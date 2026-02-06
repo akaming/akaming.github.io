@@ -19,13 +19,11 @@ export async function fetchProjects(): Promise<Project[]> {
     | order(coalesce(publishedAt, _createdAt) desc) {
       _id,
       title,
-      summary,
+      body,
       slug,
       coverImage{
         asset->{url}
       },
-      links,
-      techStack
     }
   `;
 

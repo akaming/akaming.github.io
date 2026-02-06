@@ -1,3 +1,4 @@
+import { PortableText } from "@portabletext/react";
 import type { Project } from "../types/project";
 
 type Props = {
@@ -6,7 +7,7 @@ type Props = {
 
 export default function ProjectCard({ project }: Props) {
   const imageUrl = project.coverImage?.asset?.url;
-
+  console.log(project);
   return (
     <article
       style={{
@@ -47,51 +48,19 @@ export default function ProjectCard({ project }: Props) {
       )}
 
       <h3 style={{ margin: "12px 0 8px" }}>{project.title}</h3>
-      <p style={{ margin: 0, color: "#444", lineHeight: 1.5 }}>
-        {project.summary}
-      </p>
-
-      {(project.links?.live || project.links?.repo) && (
-        <div style={{ display: "flex", gap: 12, marginTop: 12 }}>
-          {project.links?.live && (
-            <a href={project.links.live} target="_blank" rel="noreferrer">
-              Live
-            </a>
-          )}
-          {project.links?.repo && (
-            <a href={project.links.repo} target="_blank" rel="noreferrer">
-              Repo
-            </a>
-          )}
-        </div>
-      )}
-
-      {project.techStack?.length ? (
-        <ul
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: 8,
-            marginTop: 12,
-            padding: 0,
-            listStyle: "none",
+      {project.body?.length ? (
+        <PortableText
+          value={project.body}
+          components={{
+            block: {
+              normal: ({ children }) => (
+                <p style={{ margin: 0, color: "#444", lineHeight: 1.5 }}>
+                  {children}
+                </p>
+              ),
+            },
           }}
-        >
-          {project.techStack.map((t) => (
-            <li
-              key={t}
-              style={{
-                border: "1px solid #ddd",
-                borderRadius: 999,
-                padding: "4px 10px",
-                fontSize: 12,
-                color: "#333",
-              }}
-            >
-              {t}
-            </li>
-          ))}
-        </ul>
+        />
       ) : null}
     </article>
   );

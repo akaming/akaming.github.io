@@ -1,14 +1,9 @@
+import type { PortableTextBlock } from "@portabletext/types";
+
 export type Project = {
   _id: string;
   title: string;
-  summary: string;
-  slug?: { current: string };
-  coverImage?: {
-    asset?: { url?: string };
-  };
-  links?: {
-    live?: string;
-    repo?: string;
-  };
-  techStack?: string[];
+  slug: string;
+  coverImage?: { asset?: { url?: string } };
+  body?: PortableTextBlock[];
 };
