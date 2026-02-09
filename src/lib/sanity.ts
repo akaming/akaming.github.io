@@ -20,7 +20,7 @@ export async function fetchProjects(): Promise<Project[]> {
       _id,
       title,
       body,
-      slug,
+      url,
       coverImage{
         asset->{url}
       },

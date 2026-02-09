@@ -12,17 +12,16 @@ const About = () => {
         <img src={IntroImg} className={styles.introImage} alt="인트로 이미지" />
         <div>
           <Title as="h2">
-            Hello I’am <strong>Flora Sheen.</strong>
+            Hello I’am <strong>Myungmin Lee.</strong>
             <br />
-            <strong>Frontend</strong> <span>Developer</span>
+            <strong>Frontend</strong> <span>UI/UX Publisher</span>
             <br />
-            Based In <strong>India.</strong>
+            Based In <strong>Korea.</strong>
           </Title>
           <p className={styles.description}>
-            I'm Flora Sheen Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to specimen book.
+            I work on turning design into clean, responsive, and maintainable
+            user interfaces. Experienced in real-world projects using React,
+            TypeScript, and modern CSS.
           </p>
           <ul className={styles.links}>
             <li>

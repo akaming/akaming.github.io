@@ -38,6 +38,10 @@
   background-color: #fff;
 }
 
+.links li a:hover {
+  background-color: #d4d4d8;
+}
+
 @media (min-width: 1024px) {
   .content {
     flex-direction: row-reverse;
