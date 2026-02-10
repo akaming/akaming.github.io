@@ -36,7 +36,7 @@ const Projects = () => {
   if (loading) return <div style={{ padding: 24 }}>불러오는 중...</div>;
   if (error) return <div style={{ padding: 24 }}>에러: {error}</div>;
   return (
-    <Container color="dark">
+    <Container color="dark" id="projects">
       <Title as="h2" align="center" color="light">
         My <strong>Projects</strong>
       </Title>

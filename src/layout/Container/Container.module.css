@@ -6,6 +6,10 @@
   background-color: #0f1115;
 }
 
+.wrap {
+  scroll-margin-top: 72px;
+}
+
 @media (min-width: 1024px) {
   .container {
     max-width: 1280px;

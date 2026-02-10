@@ -14,7 +14,7 @@ import IconFigma from "@/assets/images/icon-figma.svg?react";
 
 const Skills = () => {
   return (
-    <Container>
+    <Container id="skills">
       <Title as="h2" align="center">
         My <strong>Skills</strong>
       </Title>

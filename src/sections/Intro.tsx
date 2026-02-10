@@ -7,7 +7,7 @@ import IconBlog from "@/assets/images/blog.svg?react";
 
 const Intro = () => {
   return (
-    <Container>
+    <Container id="home">
       <div className={styles.content}>
         <img src={IntroImg} className={styles.introImage} alt="인트로 이미지" />
         <div>

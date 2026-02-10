@@ -1,12 +1,14 @@
 .footer {
+  background-color: #111;
+}
+.footerInner {
   display: flex;
   justify-content: space-between;
   padding: 20px 16px;
-  background-color: #111;
   color: #fff;
 }
 
-.logoContainer {
+.brand {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,10 +16,13 @@
 
 .footer p {
   font-size: clamp(12px, 1.1vw, 16px);
+  color: #71717a;
 }
 
 @media (min-width: 1024px) {
-  .footer {
-    padding: 24px 80px;
+  .footerInner {
+    max-width: 1280px;
+    padding: 24px 32px;
+    margin: 0 auto;
   }
 }
