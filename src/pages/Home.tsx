@@ -5,6 +5,7 @@ import Experience from "@/sections/Experience";
 import Projects from "@/sections/Projects";
 import Status from "@/sections/Status";
 import Footer from "@/layout/Footer/Footer";
+import About from "@/sections/About";
 
 const Home = () => (
   <>
@@ -12,6 +13,7 @@ const Home = () => (
     <Intro />
     <Skills />
     <Experience />
+    <About />
     <Projects />
     <Status />
     <Footer />

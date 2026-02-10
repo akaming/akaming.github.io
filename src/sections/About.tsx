@@ -1,40 +1,41 @@
-import Container from "@/layout/Container/Container";
-import styles from "./About.module.css";
-import IntroImg from "@/assets/images/intro.png";
 import Title from "@/components/Ttitle";
-import IconGit from "@/assets/images/git.svg?react";
-import IconBlog from "@/assets/images/blog.svg?react";
+import Container from "@/layout/Container/Container";
+import ImgCat from "@/assets/images/img-cat.png";
+import styles from "./About.module.css";
 
 const About = () => {
   return (
     <Container>
       <div className={styles.content}>
-        <img src={IntroImg} className={styles.introImage} alt="인트로 이미지" />
-        <div>
+        <img src={ImgCat} alt="aubot me 이미지" />
+        <div className={styles.info}>
           <Title as="h2">
-            Hello I’am <strong>Myungmin Lee.</strong>
-            <br />
-            <strong>Frontend</strong> <span>UI/UX Publisher</span>
-            <br />
-            Based In <strong>Korea.</strong>
+            About <strong>Me</strong>
           </Title>
-          <p className={styles.description}>
-            I work on turning design into clean, responsive, and maintainable
-            user interfaces. Experienced in real-world projects using React,
-            TypeScript, and modern CSS.
-          </p>
-          <ul className={styles.links}>
-            <li>
-              <a href="https://github.com/akaming" target="_blank">
-                <IconGit aria-label="깃허브 링크" />
-              </a>
-            </li>
-            <li>
-              <a href="https://myungmin.tistory.com" target="_blank">
-                <IconBlog aria-label="개발 블로그 링크" />
-              </a>
-            </li>
-          </ul>
+          <div className={styles.text}>
+            <p>
+              I’m a Frontend UI / UX Publisher focused on turning design into
+              clean, reliable, and maintainable user interfaces. I’m
+              particularly interested in how design decisions translate into
+              real, working layouts and how small details affect usability and
+              consistency across different devices.
+            </p>
+            <p>
+              I work primarily with React and TypeScript, building
+              component-based UI with a strong emphasis on structure, spacing,
+              and responsive behavior. Rather than relying on visual effects or
+              flashy interactions, I focus on clarity, predictability, and
+              interfaces that behave as expected in real production
+              environments.
+            </p>
+            <p>
+              I value readable code, reusable components, and collaboration with
+              designers and developers to ensure that what’s designed can be
+              implemented accurately and sustainably. My goal is to build
+              interfaces that not only look good, but are practical to maintain,
+              scale, and use over time.
+            </p>
+          </div>
         </div>
       </div>
     </Container>
