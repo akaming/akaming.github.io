@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 16px;
+  background-color: #111;
+  color: #fff;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-size: clamp(12px, 1.1vw, 16px);
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 24px 80px;
+  }
+}

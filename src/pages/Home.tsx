@@ -1,18 +1,20 @@
 import Header from "@/layout/Header/Header";
-import About from "@/sections/About";
+import Intro from "@/sections/Intro";
 import Skills from "@/sections/Skills";
 import Experience from "@/sections/Experience";
 import Projects from "@/sections/Projects";
-import Contact from "@/sections/Contact";
+import Status from "@/sections/Status";
+import Footer from "@/layout/Footer/Footer";
 
 const Home = () => (
   <>
     <Header />
-    <About />
+    <Intro />
     <Skills />
     <Experience />
     <Projects />
-    <Contact />
+    <Status />
+    <Footer />
   </>
 );
 
