@@ -19,9 +19,11 @@ const Intro = () => {
             Based In <strong>Korea.</strong>
           </Title>
           <p className={styles.description}>
-            I work on turning design into clean, responsive, and maintainable
-            user interfaces. Experienced in real-world projects using React,
-            TypeScript, and modern CSS.
+            다양한 디바이스 환경을 고려해 디자인을 안정적인 사용자 인터페이스로
+            구현하는 Frontend UI/UX Publisher입니다.
+            <br />
+            React와 TypeScript를 기반으로 구조적이고 유지보수 가능한 UI를
+            구축해왔습니다.
           </p>
           <ul className={styles.links}>
             <li>
