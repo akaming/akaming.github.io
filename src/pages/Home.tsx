@@ -10,12 +10,14 @@ import About from "@/sections/About";
 const Home = () => (
   <>
     <Header />
-    <Intro />
-    <Skills />
-    <Experience />
-    <About />
-    <Projects />
-    <Status />
+    <main id="main-content">
+      <Intro />
+      <Skills />
+      <Experience />
+      <About />
+      <Projects />
+      <Status />
+    </main>
     <Footer />
   </>
 );

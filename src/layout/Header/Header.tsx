@@ -18,27 +18,37 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen((v) => !v);
   const [active, setActive] = useState<Section | null>(null);
+  const [hidden, setHidden] = useState(false);
 
   const moveTo = (id: Section) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    el?.focus({ preventScroll: true });
   };
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const onScroll = () => {
-      const scrollY = window.scrollY + 72;
+      const scrollY = window.scrollY;
+      if (scrollY > lastScrollY && scrollY > 72) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+      lastScrollY = scrollY;
+
+      const scrollYWithOffset = scrollY + 72;
 
       const skillsEl = document.getElementById("skills");
-      if (skillsEl && scrollY < skillsEl.offsetTop) {
+      if (skillsEl && scrollYWithOffset < skillsEl.offsetTop) {
         setActive(null);
         return;
       }
 
       for (let i = NAV.length - 1; i >= 0; i--) {
         const section = document.getElementById(NAV[i].id);
-        if (section && scrollY >= section.offsetTop) {
+        if (section && scrollYWithOffset >= section.offsetTop) {
           setActive(NAV[i].id);
           break;
         }
@@ -52,18 +62,21 @@ const Header = () => {
 
   return (
     <>
-      <header>
+      <a href="#main-content" className="skip-nav">
+        본문 바로가기
+      </a>
+      <header className={hidden ? styles.hidden : ""}>
         <div className={styles.headerWrap}>
-          <h1
-            className={styles.title}
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
-            <Logo
-              className={styles.logo}
-              aria-label="Myungmin Portfolio Logo"
-            />
-            <span className="sr-only">Home</span>
-            Myungmin
+          <h1 className={styles.title}>
+            <button
+              type="button"
+              className={styles.titleBtn}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              aria-label="홈으로 이동"
+            >
+              <Logo className={styles.logo} aria-hidden />
+              <span>Myungmin</span>
+            </button>
           </h1>
 
           {isDesktop ? (

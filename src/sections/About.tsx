@@ -5,7 +5,7 @@ import styles from "./About.module.css";
 
 const About = () => {
   return (
-    <Container id="about">
+    <Container id="about" tabIndex={0}>
       <div className={styles.content}>
         <img src={ImgCat} alt="aubot me 이미지" />
         <div className={styles.info}>

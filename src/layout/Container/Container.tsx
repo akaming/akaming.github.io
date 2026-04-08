@@ -6,12 +6,13 @@ type ContainerProps = {
   className?: string;
   color?: string;
   id?: string;
+  tabIndex?: number;
 };
 
-const Container = ({ color = "", id = "", children }: ContainerProps) => {
+const Container = ({ color = "", id = "", children, tabIndex }: ContainerProps) => {
   return (
     <div className={`${styles[color]} ${styles.wrap}`} id={id}>
-      <section className={styles.container}>{children}</section>
+      <section className={styles.container} tabIndex={tabIndex}>{children}</section>
     </div>
   );
 };

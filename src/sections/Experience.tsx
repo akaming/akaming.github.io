@@ -8,7 +8,7 @@ import IconIdd from "@/assets/images/icon-idd.png";
 
 const Experience = () => {
   return (
-    <Container color="dark" id="experience">
+    <Container color="dark" id="experience" tabIndex={0}>
       <Title as="h2" align="center" color="light">
         My <strong>Experience & Education</strong>
       </Title>
