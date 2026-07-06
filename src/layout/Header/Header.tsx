@@ -13,6 +13,25 @@ const NAV: { id: Section; label: string }[] = [
   { id: "projects", label: "Projects" },
 ];
 
+type NavLinksProps = {
+  active: Section | null;
+  onNavigate: (id: Section) => void;
+};
+
+const NavLinks = ({ active, onNavigate }: NavLinksProps) => (
+  <nav className={styles.nav}>
+    {NAV.map((menu) => (
+      <button
+        key={menu.id}
+        className={`${styles.link} ${active === menu.id ? styles.active : ""}`}
+        onClick={() => onNavigate(menu.id)}
+      >
+        {menu.label}
+      </button>
+    ))}
+  </nav>
+);
+
 const Header = () => {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   const [open, setOpen] = useState(false);
@@ -81,19 +100,7 @@ const Header = () => {
 
           {isDesktop ? (
             <>
-              <nav className={styles.nav}>
-                {NAV.map((menu) => (
-                  <button
-                    key={menu.id}
-                    className={`${styles.link} ${
-                      active === menu.id ? styles.active : ""
-                    }`}
-                    onClick={() => moveTo(menu.id)}
-                  >
-                    {menu.label}
-                  </button>
-                ))}
-              </nav>
+              <NavLinks active={active} onNavigate={moveTo} />
               <ThemeToggle />
             </>
           ) : (
@@ -111,19 +118,7 @@ const Header = () => {
 
               {!isDesktop && open && (
                 <div id="mobile-drawer" className={styles.mobileDrawer}>
-                  <nav className={styles.nav}>
-                    {NAV.map((menu) => (
-                      <button
-                        key={menu.id}
-                        className={`${styles.link} ${
-                          active === menu.id ? styles.active : ""
-                        }`}
-                        onClick={() => moveTo(menu.id)}
-                      >
-                        {menu.label}
-                      </button>
-                    ))}
-                  </nav>
+                  <NavLinks active={active} onNavigate={moveTo} />
                   <ThemeToggle />
                 </div>
               )}

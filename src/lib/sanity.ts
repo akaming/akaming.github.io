@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Project } from "../types/project";
+import type { Project } from "@/types/project";
 
 const PROJECT_ID = import.meta.env.VITE_SANITY_PROJECT_ID as string;
 const DATASET = import.meta.env.VITE_SANITY_DATASET as string;

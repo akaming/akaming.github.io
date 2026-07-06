@@ -1,10 +1,11 @@
+import type { ReactNode } from "react";
 import styles from "./Title.module.css";
 
 type TitleProps = {
   as?: "h1" | "h2" | "h3";
   align?: "left" | "center";
   color?: string;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const Title = ({

@@ -36,7 +36,12 @@ export default function ProjectCard({ project, index }: Props) {
           ) : null}
         </div>
         {project.url?.length ? (
-          <a href={project.url} target="_blank" className={styles.projectLink}>
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.projectLink}
+          >
             <svg
               className={styles.projectLinkIcon}
               width="20"

@@ -9,9 +9,15 @@ type ContainerProps = {
   tabIndex?: number;
 };
 
-const Container = ({ color = "", id = "", children, tabIndex }: ContainerProps) => {
+const Container = ({
+  color = "",
+  id = "",
+  className = "",
+  children,
+  tabIndex,
+}: ContainerProps) => {
   return (
-    <div className={`${styles[color]} ${styles.wrap}`} id={id}>
+    <div className={`${styles[color]} ${styles.wrap} ${className}`} id={id}>
       <section className={styles.container} tabIndex={tabIndex}>{children}</section>
     </div>
   );

@@ -27,12 +27,20 @@ const Intro = () => {
           </p>
           <ul className={styles.links}>
             <li>
-              <a href="https://github.com/akaming" target="_blank">
+              <a
+                href="https://github.com/akaming"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <IconGit aria-label="깃허브 링크" />
               </a>
             </li>
             <li>
-              <a href="https://myungmin.tistory.com" target="_blank">
+              <a
+                href="https://myungmin.tistory.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <IconBlog aria-label="개발 블로그 링크" />
               </a>
             </li>
