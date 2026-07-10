@@ -24,13 +24,11 @@ const Experience = () => {
                 </div>
                 <span>WEB UI/UX팀 | React 기반 퍼블리셔</span>
               </div>
-              <div className={styles.period}>2022.06 – 2025.12</div>
+              <div className={styles.period}>2022.06 – 2026.01</div>
             </div>
             <ul className={styles.desc}>
               <li>자사 웹 서비스 운영 및 신규 페이지 제작</li>
-              <li>
-                React 환경에서 UI 퍼블리싱 및 컴포넌트 구조에 맞춘 마크업 작업
-              </li>
+              <li>React 환경에서 UI 퍼블리싱 및 컴포넌트 구조에 맞춘 마크업 작업</li>
               <li>디자인 시안 기반 반응형 웹 구현 (PC / Mobile)</li>
               <li>운영 서비스 유지보수 및 UI 개선 작업</li>
               <li>기획·디자인·개발팀과 협업하여 서비스 화면 구현</li>
@@ -49,9 +47,7 @@ const Experience = () => {
             </div>
             <ul className={styles.desc}>
               <li>React 기반 프론트엔드 화면 개발 참여</li>
-              <li>
-                AdonisJS 기반 백엔드 API 연동 및 간단한 서버 로직 개발 경험
-              </li>
+              <li>AdonisJS 기반 백엔드 API 연동 및 간단한 서버 로직 개발 경험</li>
               <li>SI 프로젝트 일부 기능 구현 및 개발 프로세스 경험</li>
             </ul>
           </li>
@@ -84,9 +80,7 @@ const Experience = () => {
               <div className={styles.period}>2016.11 – 2018.04</div>
             </div>
             <ul className={styles.desc}>
-              <li>
-                웹에이전시(광고회사) 소속으로 다수의 웹사이트 제작 및 운영
-              </li>
+              <li>웹에이전시(광고회사) 소속으로 다수의 웹사이트 제작 및 운영</li>
               <li>기업·브랜드 웹사이트 퍼블리싱 및 유지보수</li>
               <li>프로젝트에 따라 프론트엔드 개발 업무 병행</li>
             </ul>
