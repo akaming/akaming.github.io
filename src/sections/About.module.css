@@ -12,6 +12,15 @@
   width: 100%;
   margin-top: 40px;
   word-break: keep-all;
+
+  a {
+    color: var(--color-muted);
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
 }
 
 @media (min-width: 1024px) {

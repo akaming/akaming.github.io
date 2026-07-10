@@ -6,9 +6,9 @@ const Status = () => {
     <Container>
       <p className={styles.kicker}>CURRENT STATUS</p>
       <h2 className={styles.title}>
-        <span>Currently focusing on</span>
-        <span className={styles.outline}>Frontend UI / UX Publishing</span>
-        <span>with React and TypeScript.</span>
+        <span>Currently transitioning into</span>
+        <span className={styles.outline}>Service Planning,</span>
+        <span>built on 7 years of UI/UX Publishing.</span>
       </h2>
       <p className={styles.sub}>Open to new opportunities.</p>
     </Container>
